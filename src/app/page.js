@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import EigerexpressImg from "/public/eigerexpress_fog.webp"
+import EigerImg from "/public/eiger.webp"
 import KeepScreenOnIcon from "/public/keepscreenon_icon.webp"
 import CandleIcon from "/public/candle_icon.webp"
 
@@ -17,21 +18,31 @@ export default function Home() {
       </div>
 
       <div className="px-12 py-12">
-        <h1 className="text-center text-black font-bold text-3xl">My Apps</h1>
-        <p className="text-center text-black py-4">To be more specific, one of the things I do is program apps for Android. Here are a few I made.</p>
+        <h1 className="text-center text-black font-bold text-3xl">My Projects</h1>
+        <p className="text-center text-black py-4">To be a bit more specific, one of the things I do is program apps for Android. Here are a few I made.</p>
         <div className="flex flex-wrap gap-12 justify-center py-4">
           <div className="w-[8rem] h-auto">
-            <a href="#">
+            <Link href="/projects/keepscreenon" className="hover:underline hover:brightness-90">
               <Image src={KeepScreenOnIcon} alt="Icon of KeepScreenOn" className="rounded-lg"/>
               <p className="text-center text-black py-2">KeepScreenOn</p>
-            </a>
+            </Link>
           </div>
           <div className="w-[8rem] h-auto">
-            <a href="#">
+            <Link href="/projects/candle" className="hover:underline hover:brightness-90">
               <Image src={CandleIcon} alt="Icon of Candle" className="rounded-lg"/>
               <p className="text-center text-black py-2">Candle</p>
-            </a>
+            </Link>
           </div>
+        </div>
+      </div>
+
+      <div className="relative text-center">
+        <Image src={EigerImg} className="-z-10 brightness-50 absolute inset-0 object-cover h-full w-full" alt="Eiger"></Image>
+        <div className="px-12 py-12 z-10 text-white">
+          <h1 className="font-bold text-3xl">Capturing the world</h1>
+          <p className="py-4">Appart from the above, I am very much into photography. You may see some of my work on the webpages of this site but also on the dedicated page.</p>
+          <br className="block"></br>
+          <Link href="/photography" className="rounded-full border hover:border-2 hover:font-bold px-4 py-2 text-white">Photography</Link>
         </div>
       </div>
 
