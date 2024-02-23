@@ -15,7 +15,7 @@ export default function NotFound() {
         <div className="px-12 py-12 text-black text-center">
             <p>The page you are looking for cannot be found.</p>
             <br className='block'></br>
-            <Link href="/" className="rounded-full bg-neutral-300 hover:bg-neutral-400 px-4 py-2">Homepage</Link>
+            <Link href="/" className="rounded-full bg-neutral-100 hover:bg-neutral-200 px-4 py-2">Homepage</Link>
         </div>
     </main> 
   )
