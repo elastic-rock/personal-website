@@ -1,15 +1,10 @@
-import Image from "next/image";
+import TopImage from "@/components/topimage";
 import ArrowImg from "/public/arrow_lux.webp"
 
 export default function Contact() {
     return (
         <main>
-            <div className="relative">
-                <Image src={ArrowImg} alt="Sign on tree" className="brightness-50 h-96 w-full object-cover z-0" priority={true}/>
-                <div className="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                    <h1 className="text-white text-center font-bold text-4xl">Contact</h1>
-                </div>
-            </div>
+            <TopImage image={ArrowImg} altText="Arrow sign on painted on a tree" title="Contact"></TopImage>
 
             <div className="px-12 py-12 text-black flex justify-center">
                 <div>
