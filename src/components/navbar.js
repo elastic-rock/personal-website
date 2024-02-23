@@ -56,12 +56,12 @@ export default function Navbar() {
         <div className={navBarClass}>
           <div className="mx-auto max-w-5xl px-8 py-5">
             <nav className="flex items-center justify-between">
-              <Link href="/" className="">Signature</Link>
+              <Link href="/" onClick={closeMenu}>Signature</Link>
               <div className="hidden sm:flex gap-8">
-                <Link href="#" className="hover:underline" onClick={closeMenu}>About me</Link>
-                <Link href="#" className="hover:underline" onClick={closeMenu}>Apps</Link>
-                <Link href="#" className="hover:underline" onClick={closeMenu}>Photography</Link>
-                <Link href="/contact" className="hover:underline" onClick={closeMenu}>Contact</Link>
+                <Link href="#" className="hover:underline">About me</Link>
+                <Link href="#" className="hover:underline">Apps</Link>
+                <Link href="#" className="hover:underline">Photography</Link>
+                <Link href="/contact" className="hover:underline">Contact</Link>
               </div>
               <div className="sm:hidden" id="menuBtn">
                 <button type="button" onClick={handleMenuClick}>
