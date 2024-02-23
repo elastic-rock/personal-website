@@ -58,9 +58,8 @@ export default function Navbar() {
             <nav className="flex items-center justify-between">
               <Link href="/" onClick={closeMenu}>Signature</Link>
               <div className="hidden sm:flex gap-8">
-                <Link href="#" className="hover:underline">About me</Link>
-                <Link href="#" className="hover:underline">Apps</Link>
-                <Link href="#" className="hover:underline">Photography</Link>
+                <Link href="/projects" className="hover:underline">Projects</Link>
+                <Link href="/photography" className="hover:underline">Photography</Link>
                 <Link href="/contact" className="hover:underline">Contact</Link>
               </div>
               <div className="sm:hidden" id="menuBtn">
@@ -76,9 +75,8 @@ export default function Navbar() {
 
         <div className={expMenuClass}>
           <div className="flex flex-col left-0 top-24 absolute w-full px-8 gap-2">
-            <Link href="#" className="text-black hover:underline" onClick={closeMenu}>About me</Link>
-            <Link href="#" className="text-black hover:underline" onClick={closeMenu}>Apps</Link>
-            <Link href="#" className="text-black hover:underline" onClick={closeMenu}>Photography</Link>
+            <Link href="/projects" className="text-black hover:underline" onClick={closeMenu}>Projects</Link>
+            <Link href="/photography" className="text-black hover:underline" onClick={closeMenu}>Photography</Link>
             <Link href="/contact" className="text-black hover:underline" onClick={closeMenu}>Contact</Link>
           </div>
         </div>
