@@ -17,23 +17,32 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="px-12 py-12">
-        <h1 className="text-center text-black font-bold text-3xl">My Projects</h1>
-        <p className="text-center text-black py-4">To be a bit more specific, one of the things I do is program apps for Android. Here are a few I made.</p>
+      <div className="px-12 py-12 mx-auto max-w-[88rem] text-center">
+        <h1 className="text-black font-bold text-3xl">My Projects</h1>
+        <p className="text-black py-4">To be a bit more specific, one of the things I do is program apps for Android. Here are a few I made.</p>
         <div className="flex flex-wrap gap-12 justify-center py-4">
-          <div className="w-[8rem] h-auto">
-            <Link href="/projects/keepscreenon" className="hover:underline hover:brightness-90">
-              <Image src={KeepScreenOnIcon} alt="Icon of KeepScreenOn" className="rounded-lg"/>
-              <p className="text-center text-black py-2">KeepScreenOn</p>
-            </Link>
+          <div className="sm:flex gap-12 w-[36rem] text-start">
+            <Image src={KeepScreenOnIcon} alt="KeepScreenOn icon" className="h-36 w-36 rounded-3xl"></Image>
+            <div className="py-4">
+              <Link href="/apps/keepscreenon" className="text-black font-bold text-xl hover:underline">KeepScreenOn</Link>
+              <p className="text-black py-2">
+                Keep Screen On allows you to add a quick settings tile, with which you can easily disable screen timeout and then restore the previous timeout value.
+              </p>
+            </div>
           </div>
-          <div className="w-[8rem] h-auto">
-            <Link href="/projects/candle" className="hover:underline hover:brightness-90">
-              <Image src={CandleIcon} alt="Icon of Candle" className="rounded-lg"/>
-              <p className="text-center text-black py-2">Candle</p>
-            </Link>
+
+          <div className="sm:flex gap-12 w-[36rem] text-start">
+            <Image src={CandleIcon} alt="Candle icon" className="h-36 w-36 rounded-3xl"></Image>
+            <div className="py-4">
+              <Link href="/apps/candle" className="text-black font-bold text-xl hover:underline">Candle</Link>
+              <p className="text-black py-2">
+                A very simple app that allows you to use your display as a torch. The brightness can be adjusted and the app can be started from a quick settings tile.
+              </p>
+            </div>
           </div>
         </div>
+        <br className="block"></br>
+        <Link href="/projects" className="rounded-full bg-neutral-200 hover:bg-neutral-300 px-4 py-2">Projects</Link>
       </div>
 
       <div className="relative text-center">
