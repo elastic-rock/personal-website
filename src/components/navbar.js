@@ -56,7 +56,7 @@ export default function Navbar() {
         <div className={navBarClass}>
           <div className="mx-auto max-w-5xl px-8 py-5">
             <nav className="flex items-center justify-between">
-              <Link href="/" onClick={closeMenu}>Signature</Link>
+              <Link href="/" onClick={closeMenu}>David Weis</Link>
               <div className="hidden sm:flex gap-8">
                 <Link href="/projects" className="hover:underline">Projects</Link>
                 <Link href="/photography" className="hover:underline">Photography</Link>
