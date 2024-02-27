@@ -55,11 +55,11 @@ export default function Home() {
           <h1 className="font-bold text-3xl">Capturing the world</h1>
           <p className="py-4">Appart from the above, I am very much into photography. You may see some of my work on the webpages of this site but also on the dedicated page.</p>
           <div className="py-4 gap-4 flex flex-wrap justify-center">
-            <Image className="h-48 w-auto rounded-3xl" src={EigerImg}></Image>
-            <Image className="h-48 w-auto rounded-3xl" src={ChaffinchImg}></Image>
-            <Image className="h-48 w-auto rounded-3xl" src={SnowGunImg}></Image>
-            <Image className="h-48 w-auto rounded-3xl" src={PhoneImg}></Image>
-            <Image className="h-48 w-auto rounded-3xl" src={SnowCloudImg}></Image>
+            <Image className="h-48 w-auto rounded-3xl" src={EigerImg} alt="Photo of the Eiger north face in autumn"></Image>
+            <Image className="h-48 w-auto rounded-3xl" src={ChaffinchImg} alt="Photo of a Eurasian Chiffinch"></Image>
+            <Image className="h-48 w-auto rounded-3xl" src={SnowGunImg} alt="Photo of a snow gun overlooking a valley"></Image>
+            <Image className="h-48 w-auto rounded-3xl" src={PhoneImg} alt="Photo of a person holding their phone above them"></Image>
+            <Image className="h-48 w-auto rounded-3xl" src={SnowCloudImg} alt="Photo of a dramatic cloud formation in the mountains"></Image>
           </div>
           <br className="block"/>
           <Link href="/photography" className="rounded-full border hover:border-2 hover:font-bold px-4 py-2 text-white">Photography</Link>
