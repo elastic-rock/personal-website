@@ -1,5 +1,5 @@
 import TopImage from "@/components/topimage";
-import ArrowImg from "/public/arrow_lux.webp"
+import ArrowImg from "/public/arrow_lux.jpg"
 
 export default function Contact() {
     return (
