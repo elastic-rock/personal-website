@@ -3,13 +3,13 @@ import GetItOnFDroid from "/public/get-it-on-fdroid.png"
 import ScreenshotApp from "/public/keepscreenon/screenshot-app.png"
 import ScreenshotTileDisabled from "/public/keepscreenon/screenshot-tile-disabled.png"
 import ScreenshotTileEnabled from "/public/keepscreenon/screenshot-tile-enabled.png"
-import ScreenshotTablet from "/public/keepscreenon/screenshot-tablet.png"
+import CandleOnPhoneImg from "/public/candle/candle_on_phone.jpg"
 import TopImage from "@/components/topimage";
 
 export default function KeepScreenOn() {
     return (
         <main>
-            <TopImage image={ScreenshotTablet} altText="Screenshot of KeepScreenOn on a tablet" title="KeepScreenOn"/>
+            <TopImage image={CandleOnPhoneImg} altText="Screenshot of the app Candle on a phone" title="KeepScreenOn"/>
             <div className="py-12 px-12 mx-auto max-w-5xl text-center text-black">
                 <p>
                     Keep Screen On allows you to add a quick settings tile, with which you can easily disable screen timeout and then restore the previous timeout value.
