@@ -1,7 +1,5 @@
 import TopImage from "@/components/topimage";
 
-import Image from "next/image";
-
 import KaunertalFaceImg from "/public/kaunertal_face.jpg"
 
 export default function Photography() {
