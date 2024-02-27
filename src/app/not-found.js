@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from "next/image";
-import CaffinchImage from "/public/eurasian_chaffinch.webp"
+import CaffinchImage from "/public/eurasian_chaffinch.jpg"
  
 export default function NotFound() {
   return (

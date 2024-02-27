@@ -1,5 +1,5 @@
 import TopImage from "@/components/topimage";
-import CathedralImg from "/public/cathedral.webp"
+import CathedralImg from "/public/cathedral.jpg"
 
 export default function Contact() {
     return (
