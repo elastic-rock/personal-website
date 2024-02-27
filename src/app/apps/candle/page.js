@@ -4,6 +4,10 @@ import ScreenshotApp from "/public/candle/screenshot-app.png"
 import CandleOnPhoneImg from "/public/candle/candle_on_phone.jpg"
 import TopImage from "@/components/topimage";
 
+export const metadata = {
+    title: "Candle - David Weis"
+}
+
 export default function Candle() {
     return (
         <main>

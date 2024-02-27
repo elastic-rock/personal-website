@@ -6,6 +6,10 @@ import ScreenshotTileEnabled from "/public/keepscreenon/screenshot-tile-enabled.
 import CandleOnPhoneImg from "/public/candle/candle_on_phone.jpg"
 import TopImage from "@/components/topimage";
 
+export const metadata = {
+    title: "KeepScreenOn - David Weis"
+}
+
 export default function KeepScreenOn() {
     return (
         <main>

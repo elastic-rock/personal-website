@@ -7,6 +7,10 @@ import KeepScreenOnIcon from "/public/keepscreenon/icon.png"
 import CandleIcon from "/public/candle/icon.png"
 import WebsiteReflectionImg from "/public/website_reflection.jpg"
 
+export const metadata = {
+    title: "Apps - David Weis"
+}
+
 export default function Apps() {
     return (
         <main>

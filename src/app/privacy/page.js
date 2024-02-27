@@ -1,6 +1,10 @@
 import TopImage from "@/components/topimage";
 import CathedralImg from "/public/cathedral.jpg"
 
+export const metadata = {
+    title: "Privacy - David Weis"
+}
+
 export default function Contact() {
     return (
         <main>

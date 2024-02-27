@@ -2,6 +2,10 @@ import TopImage from "@/components/topimage";
 
 import KaunertalFaceImg from "/public/kaunertal_face.jpg"
 
+export const metadata = {
+    title: "Photography - David Weis"
+}
+
 export default function Photography() {
     return (
         <main>

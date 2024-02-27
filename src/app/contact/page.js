@@ -1,6 +1,10 @@
 import TopImage from "@/components/topimage";
 import ArrowImg from "/public/arrow_lux.jpg"
 
+export const metadata = {
+    title: "Contact - David Weis"
+}
+
 export default function Contact() {
     return (
         <main>
