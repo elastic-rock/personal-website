@@ -11,8 +11,6 @@ services:
         condition: unless-stopped
   
   nginx:
-    depends_on:
-      - certbot
     container_name: nginx
     image: nginx:alpine
     ports:
