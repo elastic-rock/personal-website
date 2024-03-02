@@ -2,6 +2,7 @@
 .git
 .gitignore
 .next
+nginx.conf
 docker-compose.yml
 Dockerfile
 node_modules
