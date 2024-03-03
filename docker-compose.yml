@@ -9,16 +9,24 @@ services:
     deploy:
       restart_policy:
         condition: unless-stopped
-  
-  nginx:
-    container_name: nginx
-    image: nginx:alpine
+    labels:
+      - traefik.enable=true
+      - traefik.http.routers.personalwebsite.entrypoints=web, websecure
+      - traefik.http.routers.personalwebsite.rule=Host(`davidweis.eu`) || Host(`www.davidweis.eu`)
+      - traefik.http.routers.personalwebsite.tls=true
+      - traefik.http.routers.personalwebsite.tls.certresolver=staging
+
+  traefik:
+    container_name: traefik
+    image: traefik:latest
     ports:
       - 80:80
       - 443:443
+      - 8080:8080
     volumes:
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - /etc/letsencrypt/:/etc/letsencrypt:ro
-    deploy:
-      restart_policy:
-        condition: unless-stopped
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ssl-certs:/ssl-certs
+      - ./traefik.yaml:/etc/traefik/traefik.yaml
+
+volumes:
+  ssl-certs:
