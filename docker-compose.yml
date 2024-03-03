@@ -14,7 +14,7 @@ services:
       - traefik.http.routers.personalwebsite.entrypoints=web, websecure
       - traefik.http.routers.personalwebsite.rule=Host(`davidweis.eu`) || Host(`www.davidweis.eu`)
       - traefik.http.routers.personalwebsite.tls=true
-      - traefik.http.routers.personalwebsite.tls.certresolver=staging
+      - traefik.http.routers.personalwebsite.tls.certresolver=production
 
   traefik:
     container_name: traefik
@@ -22,11 +22,13 @@ services:
     ports:
       - 80:80
       - 443:443
-      - 8080:8080
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - ssl-certs:/ssl-certs
       - ./traefik.yaml:/etc/traefik/traefik.yaml
+    deploy:
+      restart_policy:
+        condition: unless-stopped
 
 volumes:
   ssl-certs:

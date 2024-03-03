@@ -2,10 +2,6 @@ global:
   checkNewVersion: false
   sendAnonymousUsage: false
 
-api:
-  dashboard: true
-  insecure: true
-
 entryPoints:
   web:
     address: :80
