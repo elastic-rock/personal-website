@@ -1,8 +1,8 @@
-import Image from "next/image";
-import GetItOnFDroid from "/public/get-it-on-fdroid.png"
 import ScreenshotApp from "/public/candle/screenshot-app.png"
 import CandleOnPhoneImg from "/public/candle/candle_on_phone.jpg"
 import TopImage from "@/components/topimage";
+import GetItOnFDroid from "@/components/getitonfdroid";
+import PhoneScreenshot from "@/components/phonescreenshot";
 
 export const metadata = {
     title: "Candle - David Weis"
@@ -19,11 +19,11 @@ export default function Candle() {
                 <br className="block"/>
                 <div className="flex flex-wrap gap-2 justify-center">
                     <a href="https://f-droid.org/packages/com.elasticrock.candle/" className="">
-                        <Image src={GetItOnFDroid} alt="Get it on F-Droid" className="h-20 w-auto"></Image>
+                        <GetItOnFDroid/>
                     </a>
                 </div>
                 <div className="flex flex-wrap gap-4 justify-center py-4">
-                    <Image src={ScreenshotApp} alt="Screenshot of KeepScreenOn app" className="w-64 h-auto"/>
+                    <PhoneScreenshot image={ScreenshotApp} altText="Screenshot of KeepScreenOn app"/>
                 </div>
             </div>
         </main>  

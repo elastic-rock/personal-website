@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Image from "next/image";
 import CaffinchImage from "/public/eurasian_chaffinch.jpg"
+import TopImage from '@/components/topimage';
 
 export const metadata = {
   title: "Page not found - David Weis"
@@ -10,10 +10,7 @@ export default function NotFound() {
   return (
     <main>
         <div className="relative">
-            <Image src={CaffinchImage} alt="Eurasian Chaffinch" className="h-96 w-full object-cover z-0" priority={true}/>
-            <div className="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                <h1 className="text-white text-center font-bold text-4xl">Error 404</h1>
-            </div>
+            <TopImage image={CaffinchImage} altText="Eurasian Chaffinch" title="Error 404"/>
         </div>
 
         <div className="px-12 py-12 text-black text-center">

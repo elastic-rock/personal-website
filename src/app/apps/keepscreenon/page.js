@@ -1,10 +1,10 @@
-import Image from "next/image";
-import GetItOnFDroid from "/public/get-it-on-fdroid.png"
 import ScreenshotApp from "/public/keepscreenon/screenshot-app.png"
 import ScreenshotTileDisabled from "/public/keepscreenon/screenshot-tile-disabled.png"
 import ScreenshotTileEnabled from "/public/keepscreenon/screenshot-tile-enabled.png"
 import CandleOnPhoneImg from "/public/candle/candle_on_phone.jpg"
 import TopImage from "@/components/topimage";
+import GetItOnFDroid from "@/components/getitonfdroid";
+import PhoneScreenshot from "@/components/phonescreenshot";
 
 export const metadata = {
     title: "KeepScreenOn - David Weis"
@@ -23,13 +23,13 @@ export default function KeepScreenOn() {
                 </p>
                 <div className="flex flex-wrap gap-2 justify-center">
                     <a href="https://f-droid.org/packages/com.elasticrock.keepscreenon/" className="">
-                        <Image src={GetItOnFDroid} alt="Get it on F-Droid" className="h-20 w-auto"></Image>
+                        <GetItOnFDroid/>
                     </a>
                 </div>
                 <div className="flex flex-wrap gap-4 justify-center py-4">
-                    <Image src={ScreenshotApp} alt="Screenshot of KeepScreenOn app" className="w-64 h-auto"/>
-                    <Image src={ScreenshotTileDisabled} alt="Screenshot of KeepScreenOn tile in disabled state" className="w-64 h-auto"/>
-                    <Image src={ScreenshotTileEnabled} alt="Screenshot of KeepScreenOn tile in enabled state" className="w-64 h-auto"/>
+                    <PhoneScreenshot image={ScreenshotApp} altText="Screenshot of KeepScreenOn app"/>
+                    <PhoneScreenshot image={ScreenshotTileDisabled} altText="Screenshot of KeepScreenOn tile in disabled state"/>
+                    <PhoneScreenshot image={ScreenshotTileEnabled} altText="Screenshot of KeepScreenOn tile in enabled state"/>
                 </div>
             </div>
         </main>  

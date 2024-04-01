@@ -8,12 +8,14 @@ import PhoneImg from "/public/girl_holding_phone.jpg"
 import SnowCloudImg from "/public/snow_cloud.jpg"
 import KeepScreenOnIcon from "/public/keepscreenon/icon.png"
 import CandleIcon from "/public/candle/icon.png"
+import SmallImage from "@/components/smallimage";
+import AppIcon from "@/components/appicon";
 
 export default function Home() {
   return (
     <main>
       <div className="relative">
-        <Image src={EigerexpressImg} alt="Photo of cable car" className="brightness-50 h-screen w-full object-cover z-0" priority={true}></Image>
+        <Image src={EigerexpressImg} alt="Photo of cable car" className="brightness-50 object-cover z-0 h-screen w-full" priority={true}></Image>
         <div className="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
           <h1 className="text-white text-center font-bold text-4xl">Hi, I'm David</h1>
           <br className="block"></br>
@@ -26,7 +28,7 @@ export default function Home() {
         <p className="text-black py-4">To be a bit more specific, one of the things I do is program apps for Android. Here are a few I made.</p>
         <div className="flex flex-wrap gap-12 justify-center py-4">
           <div className="sm:flex gap-12 w-[36rem] sm:text-start">
-            <Image src={KeepScreenOnIcon} alt="KeepScreenOn icon" className="h-36 w-36 rounded-3xl mx-auto"></Image>
+            <AppIcon image={KeepScreenOnIcon} altText="KeepScreenOn icon"/>
             <div className="max-sm:py-4">
               <Link href="/apps/keepscreenon" className="text-black font-bold text-xl hover:underline">KeepScreenOn</Link>
               <p className="text-black py-2">
@@ -36,7 +38,7 @@ export default function Home() {
           </div>
 
           <div className="sm:flex gap-12 w-[36rem] sm:text-start">
-            <Image src={CandleIcon} alt="Candle icon" className="h-36 w-36 rounded-3xl mx-auto"></Image>
+            <AppIcon image={CandleIcon} altText="Candle icon"/>
             <div className="max-sm:py-4">
               <Link href="/apps/candle" className="text-black font-bold text-xl hover:underline">Candle</Link>
               <p className="text-black py-2">
@@ -55,11 +57,11 @@ export default function Home() {
           <h1 className="font-bold text-3xl">Capturing the world</h1>
           <p className="py-4">Appart from the above, I am very much into photography. You may see some of my work on the webpages of this site but also on the dedicated page.</p>
           <div className="py-4 gap-4 flex flex-wrap justify-center">
-            <Image className="h-48 w-auto rounded-3xl" src={EigerImg} alt="Photo of the Eiger north face in autumn"></Image>
-            <Image className="h-48 w-auto rounded-3xl" src={ChaffinchImg} alt="Photo of a Eurasian Chiffinch"></Image>
-            <Image className="h-48 w-auto rounded-3xl" src={SnowGunImg} alt="Photo of a snow gun overlooking a valley"></Image>
-            <Image className="h-48 w-auto rounded-3xl" src={PhoneImg} alt="Photo of a person holding their phone above them"></Image>
-            <Image className="h-48 w-auto rounded-3xl" src={SnowCloudImg} alt="Photo of a dramatic cloud formation in the mountains"></Image>
+            <SmallImage image={EigerImg} altText="Photo of the Eiger north face in autumn"/>
+            <SmallImage image={ChaffinchImg} altText="Photo of a Eurasian Chiffinch"/>
+            <SmallImage image={SnowGunImg} altText="Photo of a snow gun overlooking a valley"/>
+            <SmallImage image={PhoneImg} altText="Photo of a person holding their phone above them"/>
+            <SmallImage image={SnowCloudImg} altText="Photo of a dramatic cloud formation in the mountains"/>
           </div>
           <br className="block"/>
           <Link href="/photography" className="rounded-full border hover:border-2 hover:font-bold px-4 py-2 text-white">Photography</Link>

@@ -1,7 +1,7 @@
-import Image from "next/image";
 import Link from "next/link";
 
 import TopImage from "@/components/topimage";
+import AppIcon from "@/components/appicon";
 
 import KeepScreenOnIcon from "/public/keepscreenon/icon.png"
 import CandleIcon from "/public/candle/icon.png"
@@ -18,7 +18,7 @@ export default function Apps() {
         
             <div className=" px-12 py-12 flex flex-wrap gap-12 justify-center mx-auto max-w-[88rem] text-center">
                 <div className="sm:flex gap-12 w-[36rem] sm:text-start">
-                    <Image src={KeepScreenOnIcon} alt="KeepScreenOn icon" className="h-36 w-36 rounded-3xl mx-auto"></Image>
+                    <AppIcon image={KeepScreenOnIcon} altText="KeepScreenOn icon"/>
                     <div className="max-sm:py-4">
                         <Link href="/apps/keepscreenon" className="text-black font-bold text-xl hover:underline">KeepScreenOn</Link>
                         <p className="text-black py-2">
@@ -28,7 +28,7 @@ export default function Apps() {
                 </div>
 
                 <div className="sm:flex gap-12 w-[36rem] sm:text-start">
-                    <Image src={CandleIcon} alt="Candle icon" className="h-36 w-36 rounded-3xl mx-auto"></Image>
+                    <AppIcon image={CandleIcon} altText="Candle icon"/>
                     <div className="max-sm:py-4">
                         <Link href="/apps/candle" className="text-black font-bold text-xl hover:underline">Candle</Link>
                         <p className="text-black py-2">
