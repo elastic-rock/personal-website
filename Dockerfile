@@ -1,10 +1,26 @@
-FROM node:alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm install
+FROM node:alpine as base
+WORKDIR /usr/src/app
+
+FROM base as deps
+RUN --mount=type=bind,source=package.json,target=package.json \
+    --mount=type=bind,source=package-lock.json,target=package-lock.json \
+    --mount=type=cache,target=/root/.npm \
+    npm ci --omit=dev
+
+FROM deps as build
+RUN --mount=type=bind,source=package.json,target=package.json \
+    --mount=type=bind,source=package-lock.json,target=package-lock.json \
+    --mount=type=cache,target=/root/.npm \
+    npm ci
 COPY . .
 RUN npm run build
-EXPOSE 3000
-RUN chown -R node /app
+
+FROM base as final
+ENV NODE_ENV production
+COPY package.json .
+COPY --from=deps /usr/src/app/node_modules ./node_modules
+COPY --from=build /usr/src/app/.next ./.next
+RUN chown -R node /usr/src/app
 USER node
-CMD npm run start
+EXPOSE 3000
+CMD npm start
