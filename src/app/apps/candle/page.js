@@ -2,6 +2,7 @@ import ScreenshotApp from "/public/candle/screenshot-app.png"
 import CandleOnPhoneImg from "/public/candle/candle_on_phone.jpg"
 import TopImage from "@/components/topimage";
 import GetItOnFDroid from "@/components/getitonfdroid";
+import GetItOnGitHub from "@/components/getitongithub";
 import PhoneScreenshot from "@/components/phonescreenshot";
 
 export const metadata = {
@@ -20,6 +21,9 @@ export default function Candle() {
                 <div className="flex flex-wrap gap-2 justify-center">
                     <a href="https://f-droid.org/packages/com.elasticrock.candle/" className="">
                         <GetItOnFDroid/>
+                    </a>
+                    <a href="https://github.com/elastic-rock/Candle/releases/latest">
+                        <GetItOnGitHub/>
                     </a>
                 </div>
                 <div className="flex flex-wrap gap-4 justify-center py-4">
