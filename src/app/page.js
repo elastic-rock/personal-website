@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <main>
       <div className="relative">
-        <Image src={EigerexpressImg} alt="Photo of cable car" className="brightness-50 object-cover z-0 h-screen w-full" priority={true} placeholder ="blur"></Image>
+        <Image src={EigerexpressImg} alt="Photo of cable car" className="brightness-50 object-cover z-0 h-screen w-full" priority={true} placeholder="blur"></Image>
         <div className="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
           <h1 className="text-white text-center font-bold text-4xl">Hi, I'm David</h1>
           <br className="block"></br>
