@@ -16,7 +16,7 @@ COPY . .
 RUN npm run build
 
 FROM base AS final
-ENV NODE_ENV production
+ENV NODE_ENV=production
 COPY package.json .
 COPY --from=deps /usr/src/app/node_modules ./node_modules
 COPY --from=build /usr/src/app/.next ./.next
