@@ -52,7 +52,7 @@ export default function Home() {
       </div>
 
       <div className="relative text-center">
-        <Image src={EigerImg} className="-z-10 brightness-[.25] absolute inset-0 object-cover h-full w-full" alt="Eiger"></Image>
+        <Image src={EigerImg} className="-z-10 brightness-[.25] absolute inset-0 object-cover h-full w-full" alt="Eiger" fill sizes="100vw"></Image>
         <div className="px-12 py-12 z-10 text-white mx-auto max-w-5xl">
           <h1 className="font-bold text-3xl">Capturing the world</h1>
           <p className="py-4">Appart from the above, I am very much into photography. You may see some of my work on the webpages of this site but also on the dedicated page.</p>
