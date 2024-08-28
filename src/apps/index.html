@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps - David Weis</title>
+    <link href="/build.css" rel="stylesheet">
+</head>
+<body class="min-h-screen">
+
+    <!--#include virtual="/components/navbar.html" -->
+
+    <div class="relative">
+        <img src="/media/website_reflection.jpg" class="relative h-96 w-full brightness-50 object-cover z-0"/>
+        <div class="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+            <h1 class="text-white text-center font-bold text-4xl">Apps</h1>
+        </div>
+    </div>
+    
+    <div class=" px-12 py-12 flex flex-wrap gap-12 justify-center mx-auto max-w-[88rem] text-center">
+        <div class="sm:flex gap-12 w-[36rem] sm:text-start">
+            <img src="/media/keepscreenon/icon.png" class="h-36 w-36 rounded-3xl mx-auto"/>
+            <div class="max-sm:py-4">
+                <a href="/apps/keepscreenon/" class="text-black font-bold text-xl hover:underline">KeepScreenOn</a>
+                <p class="text-black py-2">
+                    Keep Screen On allows you to add a quick settings tile, with which you can easily disable screen timeout and then restore the previous timeout value.
+                </p>
+            </div>
+        </div>
+
+        <div class="sm:flex gap-12 w-[36rem] sm:text-start">
+            <img src="/media/candle/icon.png" class="h-36 w-36 rounded-3xl mx-auto"/>
+            <div class="max-sm:py-4">
+                <a href="/apps/candle/" class="text-black font-bold text-xl hover:underline">Candle</a>
+                <p class="text-black py-2">
+                    A very simple app that allows you to use your display as a torch. The brightness can be adjusted and the app can be started from a quick settings tile.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--#include virtual="/components/footer.html" -->
+</body>
+</html>

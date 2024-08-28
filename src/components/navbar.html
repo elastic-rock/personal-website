@@ -1,0 +1,30 @@
+<nav>
+    <script src="/scripts/navbar.js"></script>
+    <div id="navbar" class="fixed top-0 w-full z-50 bg-transparent drop-shadow-md text-white">
+        <div class="mx-auto max-w-5xl px-8 py-5">
+            <div class="flex items-center justify-between">
+                <a href="/">David Weis</a>
+                <div class="hidden sm:flex gap-8">
+                    <a href="/apps/" class="hover:underline">Apps</a>
+                    <a href="/photography/" class="hover:underline">Photography</a>
+                    <a href="/contact/" class="hover:underline">Contact</a>
+                </div>
+                <div class="sm:hidden" id="menuBtn">
+                    <button type="button" onClick="handleMenuClick()">
+                        <svg id="hamburger" class="h-6 w-6" fill="none" strokeWidth="1.5" stroke="white" >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dropdown" class="fixed hidden sm:hidden top-0 z-20 right-0 w-full h-full bg-white">
+        <div class="flex flex-col left-0 top-24 absolute w-full px-8 gap-2">
+            <a href="/apps/" class="text-black hover:underline">Apps</a>
+            <a href="/photography/" class="text-black hover:underline">Photography</a>
+            <a href="/contact/" class="text-black hover:underline">Contact</a>
+        </div>
+    </div>
+</nav>

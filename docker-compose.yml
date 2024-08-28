@@ -1,0 +1,9 @@
+services:
+  personalwebsite:
+    container_name: personalwebsite
+    image: nginx:alpine
+    volumes:
+      - ./src:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - 8080:80
