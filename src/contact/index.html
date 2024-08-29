@@ -11,7 +11,24 @@
     <!--#include virtual="/components/navbar.html" -->
 
     <div class="relative">
-        <img src="/media/arrow_lux.jpg" class="relative h-96 w-full brightness-50 object-cover z-0"/>
+        <img
+        src="/media/arrow_lux_640w.webp"
+        class="relative h-96 w-full brightness-50 object-cover z-0"
+        width="6000"
+        height="4000"
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        sizes="100vw"
+        srcset="
+        /media/arrow_lux/arrow_lux_640w.webp 640w,
+        /media/arrow_lux/arrow_lux_1280w.webp 1280w,
+        /media/arrow_lux/arrow_lux_1920w.webp 1920w,
+        /media/arrow_lux/arrow_lux_2560w.webp 2560w,
+        /media/arrow_lux/arrow_lux_3840w.webp 3840w,
+        /media/arrow_lux/arrow_lux_6000w.webp 6000w
+        "
+        />
         <div class="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
             <h1 class="text-white text-center font-bold text-4xl">Contact</h1>
         </div>
