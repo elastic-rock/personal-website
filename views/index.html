@@ -8,7 +8,7 @@
 </head>
 <body class="min-h-screen">
 
-    <!--#include virtual="/components/navbar.html" -->
+    {{navbar}}
 
     <div class="relative">
         <img
@@ -54,7 +54,7 @@
                 "
                 />
                 <div class="max-sm:py-4">
-                    <a href="/apps/keepscreenon/" class="text-black font-bold text-xl hover:underline">KeepScreenOn</a>
+                    <a href="/apps/keepscreenon" class="text-black font-bold text-xl hover:underline">KeepScreenOn</a>
                     <p class="text-black py-2">
                     Keep Screen On allows you to add a quick settings tile, with which you can easily disable screen timeout and then restore the previous timeout value.
                     </p>
@@ -75,7 +75,7 @@
                 "
                 />                
                 <div class="max-sm:py-4">
-                    <a href="/apps/candle/" class="text-black font-bold text-xl hover:underline">Candle</a>
+                    <a href="/apps/candle" class="text-black font-bold text-xl hover:underline">Candle</a>
                     <p class="text-black py-2">
                         A very simple app that allows you to use your display as a torch. The brightness can be adjusted and the app can be started from a quick settings tile.
                     </p>
@@ -83,7 +83,7 @@
             </div>
         </div>
         <br class="block"></br>
-        <a href="/apps/" class="rounded-full bg-neutral-200 hover:bg-neutral-300 px-4 py-2">Apps</a>
+        <a href="/apps" class="rounded-full bg-neutral-200 hover:bg-neutral-300 px-4 py-2">Apps</a>
     </div>
 
     <div class="relative text-center">
@@ -115,7 +115,7 @@
                 <img src="/media/snow_cloud/snow_cloud_288w.webp" class="h-48 w-auto rounded-3xl" width="288" height="192" alt="Dramatic cloud during sunrise in the mountains" srcset="/media/snow_cloud/snow_cloud_288w.webp 1x, /media/snow_cloud/snow_cloud_576w.webp 2x" loading="lazy">
             </div>
             <br class="block"/>
-            <a href="/photography/" class="rounded-full border hover:border-2 hover:font-bold px-4 py-2 text-white">Photography</a>
+            <a href="/photography" class="rounded-full border hover:border-2 hover:font-bold px-4 py-2 text-white">Photography</a>
         </div>
     </div>
 
@@ -131,10 +131,10 @@
             <h1 class="text-black font-bold text-3xl">Get in touch with me</h1>
             <p class="text-black py-4">Whetever the reason, if you have something to say, don't hesitate to contact me. I will try to get in touch with you as soon as possible.</p>
             <br class="block"></br>
-            <a href="/contact/" class="rounded-full bg-neutral-300 hover:bg-neutral-400 px-4 py-2">Contact</a>
+            <a href="/contact" class="rounded-full bg-neutral-300 hover:bg-neutral-400 px-4 py-2">Contact</a>
         </div>
     </div>
 
-    <!--#include virtual="/components/footer.html" -->
+    {{footer}}
 </body>
 </html>
