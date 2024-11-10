@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy - David Weis</title>
+    <link rel="canonical" href="https://davidweis.eu/privacy"/>
+    <link href="/build.css" rel="stylesheet">
+</head>
+<body class="min-h-screen">
+
+    {{navbar}}
+
+    <div class="relative">
+        <img
+        src="/media/cathedral_640w.webp"
+        class="relative h-96 w-full brightness-50 object-cover z-0"
+        width="6000"
+        height="4000"
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        sizes="100vw"
+        srcset="
+        /media/cathedral/cathedral_640w.webp 640w,
+        /media/cathedral/cathedral_1280w.webp 1280w,
+        /media/cathedral/cathedral_1920w.webp 1920w,
+        /media/cathedral/cathedral_2560w.webp 2560w,
+        /media/cathedral/cathedral_3840w.webp 3840w,
+        /media/cathedral/cathedral_6000w.webp 6000w
+        "
+        />
+        <div class="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+            <h1 class="text-white text-center font-bold text-4xl">Privacy</h1>
+        </div>
+    </div>
+
+    <div class="px-12 py-12 text-black flex flex-col justify-center mx-auto max-w-[88rem]">
+        <p class="text-xl pb-2">What data is collected and why</p>
+        <ul class="list-disc py-4 ms-8">
+            <li>Access log: Your IP addresses, User-Agent headers and Referrer headers may be collected in server access logs. Logs older than 30 days are automatically deleted. However, your identifiers may be retained permanently if you are engaged in activities that endanger the security and uptime of the website (spamming, DDoS attacks, brute force attacks, etc). The legal basis of this processing is the legitimate interest to protect the service from nefarious activities.</li>
+        </ul>
+        <p class="text-xl pt-4 pb-2">How is your data secured</p>
+        <p class="py-4">Your data is encrypted in transit using SSL. All hosting is done through Google Cloud, where data is encrypted at rest.</p>
+        <p class="text-xl pt-4 pb-2">When is your data shared</p>
+        <ul class="list-disc py-4 ms-8">
+            <li>When required under applicable law</li>
+        </ul>
+        <p class="text-xl pt-4 pb-2">Changes and question</p>
+        <p class="py-4">This policy may be updated as needed to comply with relevant regulations and reflect any new practices. If you have any question, comments, or concerns about this privacy policy, your data, or your rights with respect to your information, please <a class="text-blue-600 hover:underline" href="/contact">reach out</a>.</p>
+    </div>
+
+    {{footer}}
+</body>
+</html>

@@ -1,0 +1,9 @@
+.gcloudignore
+.git
+.gitignore
+node_modules/
+LICENSE
+README.md
+SECURITY.md
+tailwind.config.js
+input.css

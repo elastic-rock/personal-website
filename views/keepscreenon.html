@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KeepScreenOn - David Weis</title>
+    <link rel="canonical" href="https://davidweis.eu/apps/keepscreenon"/>
+    <link href="/build.css" rel="stylesheet">
+</head>
+<body class="min-h-screen">
+
+    {{navbar}}
+
+    <div class="relative">
+        <img
+        src="/media/candle/candle_on_phone/candle_on_phone_640w.webp"
+        class="relative h-96 w-full brightness-50 object-cover z-0"
+        width="6000"
+        height="4000"
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        sizes="100vw"
+        srcset="
+        /media/candle/candle_on_phone/candle_on_phone_640w.webp 640w,
+        /media/candle/candle_on_phone/candle_on_phone_1280w.webp 1280w,
+        /media/candle/candle_on_phone/candle_on_phone_1920w.webp 1920w,
+        /media/candle/candle_on_phone/candle_on_phone_2560w.webp 2560w,
+        /media/candle/candle_on_phone/candle_on_phone_3840w.webp 3840w,
+        /media/candle/candle_on_phone/candle_on_phone_6000w.webp 6000w
+        "
+        />
+        <div class="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+            <h1 class="text-white text-center font-bold text-4xl">KeepScreenOn</h1>
+        </div>
+    </div>
+    
+    <div class="py-12 px-12 mx-auto max-w-5xl text-center text-black">
+        <p>
+            Keep Screen On allows you to add a quick settings tile, with which you can easily disable screen timeout and then restore the previous timeout value.
+        </p>
+        <p class="py-4">
+            For example, this may be useful to you if you need the display to stay on temporarily when viewing a website or document or if your device does not have the option to set the screen timeout to never in the settings.
+        </p>
+        <div class="flex flex-wrap gap-2 justify-center">
+            <a href="https://f-droid.org/packages/com.elasticrock.keepscreenon/" class="">
+                <img
+                src="/media/get-it-on-fdroid/get-it-on-fdroid_207w.webp"
+                class="h-20 w-auto"
+                loading="lazy"
+                height="80"
+                width="207"
+                alt="Get it on FDroid"
+                sizes="
+                /media/get-it-on-fdroid/get-it-on-fdroid_207w.webp 1x,
+                /media/get-it-on-fdroid/get-it-on-fdroid_414w.webp 2x
+                "
+                >
+            </a>
+            <a href="https://github.com/elastic-rock/KeepScreenOn/releases/latest">
+                <img
+                src="/media/get-it-on-github/get-it-on-github_207w.webp"
+                class="h-20 w-auto"
+                loading="lazy"
+                height="80"
+                width="207"
+                alt="Get it on GitHub"
+                sizes="
+                /media/get-it-on-github/get-it-on-github_207w.webp 1x,
+                /media/get-it-on-github/get-it-on-github_414w.webp 2x
+                "
+                >
+            </a>
+        </div>
+        <div class="flex flex-wrap gap-4 justify-center py-4">
+            <img
+            src="/media/keepscreenon/screenshot-app_256w.webp"
+            class="w-64 h-auto"
+            alt="KeepScreenOn app screenshot"
+            width="256"
+            height="542"
+            loading="lazy"
+            sizes="
+            /media/keepscreenon/screenshot-app_256w.webp 1x,
+            /media/keepscreenon/screenshot-app_512w.webp 2x
+            "
+            >
+            <img
+            src="/media/keepscreenon/screenshot-tile-disabled_256w.webp"
+            class="w-64 h-auto"
+            alt="KeepScreenOn disabled tile screenshot"
+            width="256"
+            height="542"
+            loading="lazy"
+            sizes="
+            /media/keepscreenon/screenshot-tile-disabled_256w.webp 1x,
+            /media/keepscreenon/screenshot-tile-disabled_512w.webp 2x
+            "
+            >
+            <img
+            src="/media/keepscreenon/screenshot-tile-enabled_256w.webp"
+            class="w-64 h-auto"
+            alt="KeepScreenOn enabled tile screenshot"
+            width="256"
+            height="542"
+            loading="lazy"
+            sizes="
+            /media/keepscreenon/screenshot-tile-enabled_256w.webp 1x,
+            /media/keepscreenon/screenshot-tile-enabled_512w.webp 2x
+            "
+            >
+        </div>
+    </div>
+
+    {{footer}}
+</body>
+</html>

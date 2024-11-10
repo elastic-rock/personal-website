@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apps - David Weis</title>
+    <link rel="canonical" href="https://davidweis.eu/apps"/>
+    <link href="/build.css" rel="stylesheet">
+</head>
+<body class="min-h-screen">
+
+    {{navbar}}
+
+    <div class="relative">
+        <img
+        src="/media/website_reflection_640w.webp"
+        class="relative h-96 w-full brightness-50 object-cover z-0"
+        width="6000"
+        height="4000"
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        sizes="100vw"
+        srcset="
+        /media/website_reflection/website_reflection_640w.webp 640w,
+        /media/website_reflection/website_reflection_1280w.webp 1280w,
+        /media/website_reflection/website_reflection_1920w.webp 1920w,
+        /media/website_reflection/website_reflection_2560w.webp 2560w,
+        /media/website_reflection/website_reflection_3840w.webp 3840w,
+        /media/website_reflection/website_reflection_6000w.webp 6000w
+        "
+        />
+        <div class="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+            <h1 class="text-white text-center font-bold text-4xl">Apps</h1>
+        </div>
+    </div>
+    
+    <div class=" px-12 py-12 flex flex-wrap gap-12 justify-center mx-auto max-w-[88rem] text-center">
+        <div class="sm:flex gap-12 w-[36rem] sm:text-start">
+            <img
+                src="/media/keepscreenon/icon_144w.webp"
+                class="h-36 w-36 rounded-3xl mx-auto"
+                width="144"
+                height="144"
+                alt="KeepScreenOn Icon"
+                loading="lazy"
+                srcset="
+                /media/keepscreenon/icon_144w.webp 1x,
+                /media/keepscreenon/icon_288w.webp 2x
+                "
+                />
+            <div class="max-sm:py-4">
+                <a href="/apps/keepscreenon" class="text-black font-bold text-xl hover:underline">KeepScreenOn</a>
+                <p class="text-black py-2">
+                    Keep Screen On allows you to add a quick settings tile, with which you can easily disable screen timeout and then restore the previous timeout value.
+                </p>
+            </div>
+        </div>
+
+        <div class="sm:flex gap-12 w-[36rem] sm:text-start">
+            <img
+                src="/media/candle/icon_144w.webp"
+                class="h-36 w-36 rounded-3xl mx-auto"
+                width="144"
+                height="144"
+                alt="Candle Icon"
+                loading="lazy"
+                srcset="
+                /media/candle/icon_144w.webp 1x,
+                /media/candle/icon_288w.webp 2x
+                "
+                /> 
+            <div class="max-sm:py-4">
+                <a href="/apps/candle" class="text-black font-bold text-xl hover:underline">Candle</a>
+                <p class="text-black py-2">
+                    A very simple app that allows you to use your display as a torch. The brightness can be adjusted and the app can be started from a quick settings tile.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    {{footer}}
+</body>
+</html>

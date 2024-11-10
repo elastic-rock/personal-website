@@ -1,0 +1,68 @@
+<nav>
+    <script async>
+        window.addEventListener("DOMContentLoaded", (event) => {
+            const btn = document.getElementById("menuBtn");
+            btn.addEventListener("click", (event) => {
+                const navbar = document.getElementById("navbar");
+                const dropdown = document.getElementById("dropdown");
+                const hamburger = document.getElementById("hamburger");
+                if (dropdown.classList.contains("hidden")==true){
+                    dropdown.classList.remove("hidden")
+                    navbar.classList.replace("text-white", "text-black")
+                    hamburger.setAttribute("stroke", "black")
+                    navbar.classList.remove("drop-shadow-md")
+                    document.body.classList.add("stop-scrolling")
+                } else {
+                    dropdown.classList.add("hidden")
+                    if (window.scrollY==0){
+                        hamburger.setAttribute("stroke", "white")
+                        navbar.classList.replace("text-black", "text-white")
+                    }
+                    navbar.classList.add("drop-shadow-md")
+                    document.body.classList.remove("stop-scrolling")
+                }
+            });
+        });
+
+        window.addEventListener("scroll", (event) => {
+            const navbar = document.getElementById("navbar");
+            const hamburger = document.getElementById("hamburger");
+            if (window.scrollY==0){
+                navbar.classList.replace("bg-white", "bg-transparent")
+                navbar.classList.replace("text-black", "text-white")
+                hamburger.setAttribute("stroke", "white")
+            } else {
+                navbar.classList.replace("bg-transparent", "bg-white")
+                navbar.classList.replace("text-white", "text-black")
+                hamburger.setAttribute("stroke", "black")
+            }
+        });
+    </script>
+    <div id="navbar" class="fixed top-0 w-full z-50 bg-transparent drop-shadow-md text-white">
+        <div class="mx-auto max-w-5xl px-8 py-5">
+            <div class="flex items-center justify-between">
+                <a href="/">David Weis</a>
+                <div class="hidden sm:flex gap-8">
+                    <a href="/apps" class="hover:underline">Apps</a>
+                    <a href="/photography" class="hover:underline">Photography</a>
+                    <a href="/contact" class="hover:underline">Contact</a>
+                </div>
+                <div class="sm:hidden">
+                    <button id="menuBtn" type="button" aria-label="Hamburger menu">
+                        <svg id="hamburger" class="h-6 w-6" fill="none" strokeWidth="1.5" stroke="white" >
+                            <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="dropdown" class="fixed hidden sm:hidden top-0 z-20 right-0 w-full h-full bg-white">
+        <div class="flex flex-col left-0 top-24 absolute w-full px-8 gap-2">
+            <a href="/apps" class="text-black hover:underline">Apps</a>
+            <a href="/photography" class="text-black hover:underline">Photography</a>
+            <a href="/contact" class="text-black hover:underline">Contact</a>
+        </div>
+    </div>
+</nav>

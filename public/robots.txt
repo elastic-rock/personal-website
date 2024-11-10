@@ -1,0 +1,11 @@
+User-Agent: Googlebot-Image
+Disallow: /
+
+User-agent: Googlebot
+User-agent: Bingbot
+Allow: /
+
+User-agent: *
+Disallow: /
+
+Sitemap: https://davidweis.eu/sitemap.xml

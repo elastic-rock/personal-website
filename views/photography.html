@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photography - David Weis</title>
+    <link rel="canonical" href="https://davidweis.eu/photography"/>
+    <link href="/build.css" rel="stylesheet">
+</head>
+<body class="min-h-screen">
+
+    {{navbar}}
+
+    <div class="relative">
+        <img
+        src="/media/kaunertal_face_640w.webp"
+        class="relative h-96 w-full brightness-50 object-cover z-0"
+        width="6000"
+        height="4000"
+        alt=""
+        loading="eager"
+        fetchpriority="high"
+        sizes="100vw"
+        srcset="
+        /media/kaunertal_face/kaunertal_face_640w.webp 640w,
+        /media/kaunertal_face/kaunertal_face_1280w.webp 1280w,
+        /media/kaunertal_face/kaunertal_face_1920w.webp 1920w,
+        /media/kaunertal_face/kaunertal_face_2560w.webp 2560w,
+        /media/kaunertal_face/kaunertal_face_3840w.webp 3840w,
+        /media/kaunertal_face/kaunertal_face_6000w.webp 6000w
+        "
+        />
+        <div class="absolute z-10 transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+            <h1 class="text-white text-center font-bold text-4xl">Photography</h1>
+        </div>
+    </div>
+    
+    <div class="px-12 py-12 text-black flex justify-center">
+        <div>
+            <p>My photos can be found on the following stock imagery websites:</p>
+            <br class="block"/>
+            <ul class="list-disc list-inside">
+                <li>
+                    <a href="https://www.shutterstock.com/g/davidweis" class="hover:underline">Shutterstock</a>
+                </li>
+                <li>
+                    <a href="https://stock.adobe.com/contributor/211042452/david-weis" class="hover:underline">Adobe Stock</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    {{footer}}
+</body>
+</html>
