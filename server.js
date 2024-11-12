@@ -31,6 +31,11 @@ app.use((req, res, next) => {
         res.set("Referrer-Policy", "strict-origin-when-cross-origin");
         res.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload")
         res.removeHeader('X-Powered-By');
+
+        if (req.hostname === "www.davidweis.eu") {
+            const newUrl = `https://davidweis.eu${req.originalUrl}`;
+            return res.redirect(301, newUrl);
+        }
         
         next();
     } catch (error) {
