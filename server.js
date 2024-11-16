@@ -36,6 +36,10 @@ app.use((req, res, next) => {
             const newUrl = `https://davidweis.eu${req.originalUrl}`;
             return res.redirect(301, newUrl);
         }
+
+        if (req.originalUrl.startsWith("/.well-known/openpgpkey")) {
+            res.set("Access-Control-Allow-Origin", "*")
+        }
         
         next();
     } catch (error) {
