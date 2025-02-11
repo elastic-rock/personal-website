@@ -1,5 +1,5 @@
 FROM node:22-alpine
-ENV NODE_ENV production
+ENV NODE_ENV=production
 WORKDIR /usr/src/app
 RUN --mount=type=bind,source=package.json,target=package.json \
     --mount=type=bind,source=package-lock.json,target=package-lock.json \

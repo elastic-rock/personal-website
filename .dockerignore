@@ -7,6 +7,5 @@ Dockerfile
 LICENSE
 README.md
 SECURITY.md
-tailwind.config.js
 input.css
 /public

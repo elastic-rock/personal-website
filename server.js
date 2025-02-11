@@ -32,11 +32,6 @@ app.use((req, res, next) => {
         res.set("Strict-Transport-Security", "max-age=31536000; includeSubDomains; preload")
         res.removeHeader('X-Powered-By');
 
-        if (req.hostname === "www.davidweis.eu") {
-            const newUrl = `https://davidweis.eu${req.originalUrl}`;
-            return res.redirect(301, newUrl);
-        }
-
         if (req.originalUrl.startsWith("/.well-known/openpgpkey")) {
             res.set("Access-Control-Allow-Origin", "*")
         }
@@ -45,7 +40,6 @@ app.use((req, res, next) => {
     } catch (error) {
         const log = {
             severity: "ERROR",
-            "logging.googleapis.com/trace": req.header("X-Cloud-Trace-Context"),
             message: `Caught error at headers middleware: ${error}`
         }
         console.log(JSON.stringify(log));
@@ -61,7 +55,6 @@ app.get("/", (req, res) => {
     } catch (error) {
         const log = {
             severity: "ERROR",
-            "logging.googleapis.com/trace": req.header("X-Cloud-Trace-Context"),
             message: `Caught error at /: ${error}`
         }
         console.log(JSON.stringify(log));
@@ -75,7 +68,6 @@ app.get("/apps", (req, res) => {
     } catch (error) {
         const log = {
             severity: "ERROR",
-            "logging.googleapis.com/trace": req.header("X-Cloud-Trace-Context"),
             message: `Caught error at /apps: ${error}`
         }
         console.log(JSON.stringify(log));
@@ -89,7 +81,6 @@ app.get("/apps/candle", (req, res) => {
     } catch (error) {
         const log = {
             severity: "ERROR",
-            "logging.googleapis.com/trace": req.header("X-Cloud-Trace-Context"),
             message: `Caught error at /apps/candle: ${error}`
         }
         console.log(JSON.stringify(log));
@@ -103,7 +94,6 @@ app.get("/apps/keepscreenon", (req, res) => {
     } catch (error) {
         const log = {
             severity: "ERROR",
-            "logging.googleapis.com/trace": req.header("X-Cloud-Trace-Context"),
             message: `Caught error at /apps/keepscreenon: ${error}`
         }
         console.log(JSON.stringify(log));
@@ -117,7 +107,6 @@ app.get("/contact", (req, res) => {
     } catch (error) {
         const log = {
             severity: "ERROR",
-            "logging.googleapis.com/trace": req.header("X-Cloud-Trace-Context"),
             message: `Caught error at /contact: ${error}`
         }
         console.log(JSON.stringify(log));
@@ -131,7 +120,6 @@ app.get("/photography", (req, res) => {
     } catch (error) {
         const log = {
             severity: "ERROR",
-            "logging.googleapis.com/trace": req.header("X-Cloud-Trace-Context"),
             message: `Caught error at /photography: ${error}`
         }
         console.log(JSON.stringify(log));
@@ -145,7 +133,6 @@ app.get("/privacy", (req, res) => {
     } catch (error) {
         const log = {
             severity: "ERROR",
-            "logging.googleapis.com/trace": req.header("X-Cloud-Trace-Context"),
             message: `Caught error at /privacy: ${error}`
         }
         console.log(JSON.stringify(log));
@@ -159,8 +146,7 @@ app.use((req, res) => {
     } catch (error) {
         const log = {
             severity: "ERROR",
-            "logging.googleapis.com/trace": req.header("X-Cloud-Trace-Context"),
-            message: `Caught error at 410 middleware: ${error}`
+            message: `Caught error at 404 middleware: ${error}`
         }
         console.log(JSON.stringify(log));
         res.sendStatus(500);
