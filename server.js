@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const crypto = require('crypto');
 const fs = require("fs");
 
 const port = process.env.PORT || 3000;
@@ -20,8 +21,11 @@ const errorData = fs.readFileSync(path.join(__dirname, "views", "404.html"), "ut
 
 app.use((req, res, next) => {
     try {
+        const nonce = crypto.randomBytes(16).toString('base64');
+        res.locals.nonce = nonce;
+
         res.set("Cache-Control", "no-cache, public");
-        res.set("Content-Security-Policy", `default-src 'none'; script-src 'self' 'strict-dynamic' 'sha256-0GkazRTE8onURxCn+8SpdrFT1z4HKpFZsivrD7luYIo=' 'unsafe-inline' https: http:; style-src 'self'; img-src 'self'; base-uri 'none'; require-trusted-types-for 'script';`);
+        res.set("Content-Security-Policy", `default-src 'none'; script-src 'self' 'strict-dynamic' 'nonce-${nonce}' 'unsafe-inline' https: http:; style-src 'self'; img-src 'self'; base-uri 'none'; require-trusted-types-for 'script';`);
         res.set("X-Content-Type-Options", "nosniff");
         res.set("X-Frame-Options", "DENY");
         res.set("X-Xss-Protection", "0");
@@ -51,7 +55,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
     try {
-        res.send(indexData);
+        res.send(indexData.replace(/{{nonce}}/g, res.locals.nonce));
     } catch (error) {
         const log = {
             severity: "ERROR",
@@ -64,7 +68,7 @@ app.get("/", (req, res) => {
 
 app.get("/apps", (req, res) => {
     try {
-        res.send(appsData);
+        res.send(appsData.replace(/{{nonce}}/g, res.locals.nonce));
     } catch (error) {
         const log = {
             severity: "ERROR",
@@ -77,7 +81,7 @@ app.get("/apps", (req, res) => {
 
 app.get("/apps/candle", (req, res) => {
     try {
-        res.send(candleData);
+        res.send(candleData.replace(/{{nonce}}/g, res.locals.nonce));
     } catch (error) {
         const log = {
             severity: "ERROR",
@@ -90,7 +94,7 @@ app.get("/apps/candle", (req, res) => {
 
 app.get("/apps/keepscreenon", (req, res) => {
     try {
-        res.send(keepScreenOnData);
+        res.send(keepScreenOnData.replace(/{{nonce}}/g, res.locals.nonce));
     } catch (error) {
         const log = {
             severity: "ERROR",
@@ -103,7 +107,7 @@ app.get("/apps/keepscreenon", (req, res) => {
 
 app.get("/contact", (req, res) => {
     try {
-        res.send(contactData);
+        res.send(contactData.replace(/{{nonce}}/g, res.locals.nonce));
     } catch (error) {
         const log = {
             severity: "ERROR",
@@ -116,7 +120,7 @@ app.get("/contact", (req, res) => {
 
 app.get("/photography", (req, res) => {
     try {
-        res.send(photographyData);
+        res.send(photographyData.replace(/{{nonce}}/g, res.locals.nonce));
     } catch (error) {
         const log = {
             severity: "ERROR",
@@ -129,7 +133,7 @@ app.get("/photography", (req, res) => {
 
 app.get("/privacy", (req, res) => {
     try {
-        res.send(privacyData);
+        res.send(privacyData.replace(/{{nonce}}/g, res.locals.nonce));
     } catch (error) {
         const log = {
             severity: "ERROR",
@@ -142,7 +146,7 @@ app.get("/privacy", (req, res) => {
 
 app.use((req, res) => {
     try {
-        res.status(404).send(errorData);
+        res.status(404).send(errorData.replace(/{{nonce}}/g, res.locals.nonce));
     } catch (error) {
         const log = {
             severity: "ERROR",
