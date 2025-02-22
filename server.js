@@ -25,7 +25,7 @@ app.use((req, res, next) => {
         res.locals.nonce = nonce;
 
         res.set("Cache-Control", "no-cache, public");
-        res.set("Content-Security-Policy", `default-src 'none'; script-src 'self' 'strict-dynamic' 'nonce-${nonce}' 'unsafe-inline' https: http:; style-src 'self'; img-src 'self'; base-uri 'none'; connect-src plausible.davidweis.eu; require-trusted-types-for 'script';`);
+        res.set("Content-Security-Policy", `default-src 'none'; script-src 'self' 'strict-dynamic' 'nonce-${nonce}' 'unsafe-inline' https: http:; style-src 'self'; img-src 'self'; base-uri 'none'; connect-src 'self'; require-trusted-types-for 'script';`);
         res.set("X-Content-Type-Options", "nosniff");
         res.set("X-Frame-Options", "DENY");
         res.set("X-Xss-Protection", "0");
