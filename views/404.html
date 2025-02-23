@@ -7,6 +7,7 @@
     <link href="/build.css" rel="stylesheet">
     <script defer data-api="/api/event" data-domain="davidweis.eu" src="/js/script.file-downloads.outbound-links.js" nonce="{{nonce}}"></script>
     <script nonce="{{nonce}}">window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+    <script nonce="{{nonce}}">document.addEventListener('DOMContentLoaded', function () { plausible('404', { props: { path: document.location.pathname } }); });</script>
 </head>
 <body class="min-h-screen">
 
